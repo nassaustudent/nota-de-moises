@@ -7,11 +7,11 @@ public class DivisaoDeNumeros {
 		//Criamos um objeto Scanner para capturar o que foi digitado
 		Scanner input = new Scanner(System.in);
 		//Imprime mensagem para a inserção do primeiro valor
-		System.out.println("Insira o valor do dividendo: ");
+		System.out.println("Insira o valor do numerador: ");
 		//Guarda o valor digitado pelo usuário na variável dividendo
 		int dividendo = input.nextInt();
 		//Imprime mensagem para a inserção do segundo valor
-		System.out.println("Insira o valor do divisor: ");
+		System.out.println("Insira o valor do denominador: ");
 		//Guarda o valor digitado pelo usuário na variável divisor,
 		int divisor = input.nextInt();
 		
@@ -23,11 +23,11 @@ public class DivisaoDeNumeros {
 		//Verifica se o valor do cálculo da divisão é negativo
 		else if ((dividendo / divisor < 0)) {
 			//Imprime o valor 0 caso o resultdo da divisão seja negativo
-			System.out.println("Valor encontrado: 0");
+			System.out.println("Valor que foi encontrado: 0");
 		}
 		else {
 			//Como o divisor não é zero e o cálculo não é negativo, imprime o resultado da divisão
-			System.out.println("Valor calculado: " + dividendo / divisor);
+			System.out.println("Valor calculado é: " + dividendo / divisor);
 		}
 	}
 }
