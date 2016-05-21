@@ -1,18 +1,8 @@
-Comitar em Moises
-
-https://github.com/nassaustudent/nota-de-moises
-
-
 //Segunda versão, com erro de lógica
 
 import java.util.Scanner;
 
-
-
 public class DivisaoDeNumeros {
-
-
-
 	public static void main(String[] args) {
 
 		//Criamos um objeto Scanner para capturar o que foi digitado
