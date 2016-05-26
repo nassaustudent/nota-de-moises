@@ -48,32 +48,7 @@ public class BehaviorExample extends JFrame {
         setVisible(true);
     }
     
-    ///////////////////////////////////////////////////////////////////////
-    // Método responsável pela criação do grafo de cena (ou sub-grafo)
-    //    
-    public BranchGroup criaGrafoDeCena() {
-        
-        // Cria o nó raiz 
-        BranchGroup objRaiz = new BranchGroup();
-
-        // Cria o nodo TransformGroup e permite que ele possa
-        // ser alterado em tempo de execução (TRANSFORM_WRITE).
-        // Depois, adiciona-o na raiz do grafo de cena.
-        TransformGroup objTrans = new TransformGroup();
-        objTrans.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
-        objRaiz.addChild(objTrans);
-
-        // Cria um "bounds" para o background 
-        BoundingSphere bounds =
-           new BoundingSphere(new Point3d(0.0,0.0,0.0), 100.0);
-
-        // Especifica um background azul e adiciona-o no grafo
-        Color3f bgColor = new Color3f(0.1f, 0.1f, 0.7f);
-        Background bg = new Background(bgColor);
-        bg.setApplicationBounds(bounds);
-        objRaiz.addChild(bg);
-
-        // Especifica as luzes do "ambiente"
+    
         
         // Luz Ambiente
         Color3f corAmb = new Color3f(0.2f, 0.2f, 0.2f);
@@ -90,18 +65,7 @@ public class BehaviorExample extends JFrame {
         
         Appearance app = new Appearance();
 
-        //Color3f ambientColor, Color3f emissiveColor, Color3f diffuseColor, 
-        //				Color3f specularColor, float shininess
-        Material material = new Material(new Color3f(0.8f,0.2f,0.8f), 
-						new Color3f(0.0f,0.0f,0.0f), 
-						new Color3f(0.8f,0.2f,0.8f), 
-						new Color3f(1.0f,1.0f,1.0f), 100.0f); 
-
-        app.setMaterial(material);
         
-        Cylinder cilindro = new Cylinder(0.5f, 0.8f, 1, 20, 10, app);
-        
-        objTrans.addChild(cilindro);  
     
         // Para o Java 3D realizar otimizações no grafo de cena
         objRaiz.compile();
