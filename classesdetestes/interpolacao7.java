@@ -18,8 +18,22 @@ int main(int argc, char *argv[])
         printf("Insira o valor de y%d :\t",cont);
         scanf("%f",&vetfx[cont]);
      }                                
-     
-     
+     printf("\n");   
+     printf("Insira o valor de x para o qual deseja obter f<x>: ");
+     scanf("%f",&x);
+     printf("\n");
+     fx=0;        
+     pdtfinal=1;
+     for(i=0;i<tamanho;i++){
+       for(j=0;j<=tamanho;j++){
+          if(j=i){j++;}
+          pdtparcial=0;
+          pdtparcial=(x-vetx[j])/(vetx[i]-vetx[j]);          
+          if(j!=tamanho){ pdtfinal*=pdtparcial; }
+       }
+       fx=fx+vetfx[i]*pdtfinal;
+       pdtfinal=0;                                            
+     } 
      printf("O valor de f<%f> e : %.4f ",x,fx);
      printf("\n\n");
   system("PAUSE");    
