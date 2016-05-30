@@ -49,23 +49,7 @@ public class BehaviorExample extends JFrame {
     }
     
     
-        
-        // Luz Ambiente
-        Color3f corAmb = new Color3f(0.2f, 0.2f, 0.2f);
-        AmbientLight luzAmb = new AmbientLight(corAmb);
-        luzAmb.setInfluencingBounds(bounds);
-        objRaiz.addChild(luzAmb);        
- 
-        // Luz Direcional
-        Color3f corLuz = new Color3f(0.9f, 0.9f, 0.9f);
-        Vector3f direcaoLuz  = new Vector3f(-1.0f, -1.0f, -1.0f);
-        DirectionalLight luzDir = new DirectionalLight(corLuz, direcaoLuz);
-        luzDir.setInfluencingBounds(bounds);
-        objRaiz.addChild(luzDir); 
-        
-        Appearance app = new Appearance();
-
-        
+       
     
         // Para o Java 3D realizar otimizações no grafo de cena
         objRaiz.compile();
