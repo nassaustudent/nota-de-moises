@@ -16,9 +16,12 @@ public class Calc {
 	
 
 
-///////////////////
-// inclusão do menu
-////////////////////////
+public static void main (String args[]){
+		//criando um objeto c a apartir do metodo calc
+		Calc c = new Calc();
+		//declarando as varíaveis
+
+int opcao = 5;
 
 
 
